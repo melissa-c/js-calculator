@@ -1,10 +1,16 @@
+document.getElementById('one').onclick = getButton();
+
 document.getElementById('display').value; //GET
 
 document.getElementById('display').innerHTML =//SET
 
-function getButton(e){
-var i = document.getElementById('one').value;
-document.getElementById('display').innerHTML = '1';
+function calculate(e){
+//var e = window.event
+//var btn = e.target || e.srcElement;
+console.log(event.target.id);
+alert (event.target.id);
+//var i = document.getElementById('one').value;
+//document.getElementById('display').innerHTML = 'i';
 }
 
 function display(e) {
