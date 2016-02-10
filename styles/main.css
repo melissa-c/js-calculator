@@ -1,4 +1,16 @@
-table {
+form {
   border-style: 1px solid;
-  border-radius: 35%
+  border-radius: 35%;
+  alignment: center;
+  align-content: center;
+}
+.form-container{
+  max-width: 450px;
+}
+button {
+  border-width: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
 }

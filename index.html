@@ -39,15 +39,86 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div class ="container">
-    <section class="header">
-      <h2 class = "title"></h2>
-    
-    </section>
-
-   
-          <div class = "calculate">
-             <table>
+  <div class = "container">
+    <form class = "form-container" id = "form1" action = "_blank">
+      <div class = "row">
+        <div class = "twelve-columns">Calculator</div>
+      </div>
+      <div class = "row">
+        <div class = "twelve-columns">
+          <input type = "text" name= "display" value = "result" readonly></div>
+      </div>
+      <div class = "row">
+        <div class = "three-columns">
+          <input type = "button" name = "ac" value = "AC">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "ce" value = "CE">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "modulus" value = "%">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "division" value = "/">
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "three-columns">
+          <input type = "button" name = "seven" value = "7">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "eight" value = "8">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "nine" value = "9">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "multiply" value = "x">
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "three-columns">
+          <input type = "button" name = "four" value = "4">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "five" value = "5">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "six" value = "6">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "subtract" value = "-">
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "three-columns">
+          <input type = "button" name = "one" value = "1">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "two" value = "2">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "three" value = "3">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "equal" value = "=">
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "three-columns">
+          <input type = "button" name = "zero" value = "0">
+        </div>
+        <div class = "three-columns">
+          <input type = "button" name = "decimal" value = ".">
+        </div>
+        <div class = "six-columns">
+          <input type = "button" name = "addition" value = "+">
+        </div>
+        
+      </div>
+    </form>
+  </div>
+             <!--<table>
                <thead></thead>
                <tbody>
                <tr>
@@ -83,8 +154,8 @@
                       <td input type ="button"id = "equals" onclick = "calculate(e);">=</td>
                  </tr>
                </tbody>
-             </table> 
-          </div> 
+             </table> -->
+        
                
            
             

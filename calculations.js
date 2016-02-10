@@ -1,4 +1,4 @@
-document.getElementById('one').onclick = getButton();
+/**document.getElementById('one').onclick = getButton();
 
 document.getElementById('display').value; //GET
 
