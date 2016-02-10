@@ -26,13 +26,15 @@
   
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type ="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-  <link href = "styles/main.css" rel="stylesheet" type="text/css">
- 
+  <link href = "style/main.css" rel="stylesheet" type="text/css">
+  
 
   <!-- Favicon/image links
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <!-- <link rel="icon" type="image/png" href="images/favicon.png">-->
+ <!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+<script src="JS/script.js" type="text/javascript"> </script>
 </head>
 <body>
 
@@ -48,46 +50,47 @@
    
           <div class = "calculate">
              <table>
-               <thead></thead>
-               <tbody>
-               <tr><td input type = "text"></td></tr>
-                 <tr>
-                   <td>AC</td>
-                    <td>CE</td>
-                     <td>%</td>
-                      <td>/</td>
-                 </tr>
-                 <tr>
-                   <td>7></td>
-                     <td>8</td>
-                      <td>9</td>
-                      <td>x</td>
-                 </tr>
-                 <tr>
-                   <td>4</td>
-                    <td>5</td>
-                     <td>6</td>
-                      <td>-</td>
-                 </tr>
-                 <tr>
-                   <td>1</td>
-                    <td>2</td>
-                     <td>3</td>
-                      <td>+</td>
-                 </tr>
-                 <tr>
-                   <td></td>
-                    <td>0</td>
-                     <td>.</td>
-                      <td>=</td>
-                 </tr>
-               </tbody>
-             </table>
+                <caption>JS Calculator</caption>
+                  <thead>
+                    <tr>
+                      <th colspan="4"><div id= "screen"></div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><button id="AC" onclick="clearAll()">AC</button></td>
+                      <td><button id="C" onclick="clearLast">C</button></td>
+                      <td><button id="modulus" onclick="myFunction('%')">%</button></td>
+                      <td><button id="add" onclick="myFunction('+')">+</button></td>
+                    </tr>
+                    <tr>
+                      <td><button id="one" onclick="myFunction(1)">1</button></td>
+                      <td><button id="two" onclick="myFunction(2)">2</button></td>
+                      <td><button id="three" onclick="myFunction(3)">3</button></td>
+                      <td><button id="minus" onclick="myFunction('-')">-</button></td>
+                    </tr>
+                    <tr>
+                      <td><button id="four" onclick="myFunction(4)">4</button></td>
+                      <td><button id="five" onclick="myFunction(5)">5</button></td>
+                      <td><button id="six" onclick="myFunction(6)">6</button></td>
+                      <td><button id="divide" onclick="myFunction('/')">/</button></td>
+                    </tr>
+                    <tr>
+                      <td><button id="seven" onclick="myFunction(7)">7</button></td>
+                      <td><button id="eight" onclick="myFunction(8)">8</button></td>
+                      <td><button id="nine" oonclick="myFunction(9)">9</button></td>
+                      <td><button id="multiply" onclick="myFunction('*')">*</button></td>
+                    </tr>
+                    <tr>
+                      <td><button id="point" onclick="myFunction('.')">.</button></td>
+                      <td><button id="zero" onclick="myFunction(0)">0</button></td>
+                      <td><button id="ans" onclick="myFunction("ans")">ans</button></td>
+                      <td><button id="equals" onclick="myFunction('=')">=</button></td>
+                    </tr>
+                  </tbody>
+</table>
           </div> 
                
-           
-            
-              
             
 
       <div class ="footer-home">
