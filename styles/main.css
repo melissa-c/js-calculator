@@ -16,7 +16,16 @@ form {
 input[type = "text"] {
   width: 100%;
 }
-input[type = "button"] {
+/*input[type = "button"] {
+  border-width: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  padding:5px;
+}*/
+button {
   border-width: 1px solid;
   border-radius: 10px;
   text-align: center;
