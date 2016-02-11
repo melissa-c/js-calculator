@@ -1,8 +1,10 @@
-// get all the buttons (children of the parent div)
+window.onload = addCalculator();
+
 function addCalculator () {
   var el = document.getElementsByTag("button");
   el.addEventListener("click", getCalculations, false);
 }
+// get all the buttons (children of the parent div)
 function getCalculations () {
   var btns = document.querySelectorAll("#calculate, button");
   var operators = ["+", "-", "x", "/", "%"];
