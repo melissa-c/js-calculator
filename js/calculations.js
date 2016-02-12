@@ -1,17 +1,18 @@
-//window.onload = addCalculator();
-window.onload = getCalculations();
+window.onload = getCalculations(); // this makes sure the html page is fully loaded/parsed first before the js script gets parsed
 
+//  do not think we need this/kinda of iterates the onclick function on line 18ish
 /*  var btnArray = document.getElementById("calculate").getElementsByTagName("button");
   for (var i = 0; i < btnArray.length; i++) {
     (btnArray[i].id).addEventListener("click", getCalculations, false);
   }
 }*/
-// get all the buttons (children of the parent div)
+// get all the buttons (children of the parent div) that we need to operate/calculate with
 function getCalculations () {
   var btns = document.querySelectorAll("#calculate, button");
-  var operators = ["+", "-", "x", "/"]; // need modulus %
+  var operators = ["+", "-", "x", "/","%"]; // need modulus % OR is it percent?
   var decimalUsed = false;
 
+// iterate through buttons
 // add onclick event to all the buttons and then perform operations
   for (var i = 0; i < btns.length; i++) {
     btns[i].onclick = function (e) {
@@ -20,21 +21,21 @@ function getCalculations () {
       var inputValue = input.innerHTML;
       var btnValue = this.innerHTML;
       // append button values to the input string then evaluate
-      // if clear key is presses erase everything
-      if (btnValue === "AC") {
+      // if clear all button  is clicked  then clear/erase everything on the screen
+      if (btnValue === "AC") { // could put the CE (clear entry) if statment after this if
         input.innerHTML = " ";
         decimalUsed = false;
       } else if (btnValue === "=") {    //  if equals button is clicked then calculate and display
         var calculation = inputValue;
         var endChar = calculation[calculation.length - 1];
         // use replace with a regular expression to change operators
-        calculation = calculation.replace(/x/g, "*").replace(/\//g, "/");
-        // then check end character and remove if is  a decimal or operator
+        calculation = calculation.replace(/x/g, "*").replace(/\//g, "/"); //probably dont need the '\//' but to be sure
+        // then check end character and remove if it is a decimal or operator
         if (operators.indexOf(endChar) > -1 || endChar === ".") {
           calculation = calculation.replace(/.$/, " ");
         }
         if (calculation) {
-          input.innerHTML = eval(calculation);
+          input.innerHTML = eval(calculation);  // this (eval)is dangerous (apperently) so need alternative method
         }
         decimalUsed = false;
       } else if (operators.indexOf(btnValue) > -1) {   // do some validation
@@ -42,6 +43,7 @@ function getCalculations () {
         if (inputValue !==  " " && operators.indexOf(endChar) === -1) {
           input.innerHTML += btnValue;
         }
+      // using regular expressions is cool line 32, 35 and 50
       // replace last operator with latest btn value clicked
       // the '.' matches any character and the $ matches end of string
         if (operators.indexOf(endChar) > -1 && inputValue.length > 1) {
@@ -57,7 +59,7 @@ function getCalculations () {
       else {
         input.innerHTML += btnValue;
       }
-    e.preventDefault();
+      e.preventDefault();
     };
   }
 }
