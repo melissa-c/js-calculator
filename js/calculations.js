@@ -16,7 +16,7 @@ function getCalculations () {
   for (var i = 0; i < btns.length; i++) {
     btns[i].onclick = function (e) {
     // get the input and button values
-      var input = document.querySelctor('.screen');
+      var input = document.querySelector('.screen');
       var inputValue = input.innerHTML;
       var btnValue = this.innerHTML;
       // append button values to the input string then evaluate
