@@ -1,9 +1,9 @@
 window.onload = addCalculator();
 
 function addCalculator () {
-  var btnArray = document.getElementById("table").getElementsByTagName("button");
+  var btnArray = document.getElementById("calculate").getElementsByTagName("button");
   for (var i = 0; i < btnArray.length; i++) {
-    document.getElementById(btnArray[i].id).addEventListener("click", getCalculations, false);
+    (btnArray[i].id).addEventListener("click", getCalculations, false);
   }
 }
 // get all the buttons (children of the parent div)
