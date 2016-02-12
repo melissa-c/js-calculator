@@ -1,15 +1,15 @@
-window.onload = addCalculator();
+//window.onload = addCalculator();
+window.onload = getCalculations();
 
-function addCalculator () {
-  var btnArray = document.getElementById("calculate").getElementsByTagName("button");
+/*  var btnArray = document.getElementById("calculate").getElementsByTagName("button");
   for (var i = 0; i < btnArray.length; i++) {
     (btnArray[i].id).addEventListener("click", getCalculations, false);
   }
-}
+}*/
 // get all the buttons (children of the parent div)
 function getCalculations () {
   var btns = document.querySelectorAll("#calculate, button");
-  var operators = ["+", "-", "x", "/", "%"];
+  var operators = ["+", "-", "x", "/"]; // need modulus %
   var decimalUsed = false;
 
 // add onclick event to all the buttons and then perform operations
