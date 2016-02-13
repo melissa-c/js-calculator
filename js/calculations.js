@@ -8,7 +8,7 @@ window.onload = getCalculations(); // this makes sure the html page is fully loa
 }*/
 // get all the buttons (children of the parent div) that we need to operate/calculate with
 function getCalculations () {
-  var btns = document.querySelectorAll("#calculator, button");
+  var btns = document.querySelectorAll("#calculate, button");
   var operators = ["+", "-", "x", "/","%"]; // need modulus % OR is it percent?
   var decimalUsed = false;
 
@@ -25,12 +25,13 @@ function getCalculations () {
       if (btnValue === "AC") { // could put the CE (clear entry) if statment after this if
         input.innerHTML = " ";
         decimalUsed = false;
-        if (btnValue === "CE"){
+      } else if (btnValue === "CE"){
         // get the last value on the screen whether numeral, opeartor
-          var clearLast = input.length - 1;
-          input.innerHTML = clearLast;
+          // var clearLast = input.length - 1;
+          // input.innerHTML = clearLast;
+          input.innerHTML = inputValue.substr(0, inputValue.length-1);
           decimalUsed = false;
-        }
+        
       } else if (btnValue === "=") {    //  if equals button is clicked then calculate and display
         var calculation = inputValue;
         var endChar = calculation[calculation.length - 1];
@@ -91,6 +92,3 @@ function getCalculations () {
   }
   document.calculate.display.value = answer;
 }*/
-
-
-
